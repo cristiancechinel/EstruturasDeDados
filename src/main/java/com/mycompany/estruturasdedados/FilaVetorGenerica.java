@@ -1,16 +1,18 @@
 package com.mycompany.estruturasdedados;
 
-public class FilaVetor {
+public class FilaVetorGenerica<Item> {
     
     private int ini, qt; 
-    private Integer[] dados;
+    private Item[] dados;
     
-    FilaVetor(int tam){
+    FilaVetorGenerica(int tam){
         ini = qt = 0;
-        dados = new Integer[tam];
+        dados = (Item[]) new Object[tam];
+        //instancia um objeto do tipo Object e 
+        // transforma esse objeto em um vetor de itens
     }
     
-    void insereFinal(int n){
+    void insereFinal(Item n){
         if (qt != dados.length){
             int pos = (ini + qt) % dados.length;
             dados[pos] = n;
@@ -21,9 +23,9 @@ public class FilaVetor {
         //não pode inserir
     }
     
-    Integer removeInicio(){
+    Item removeInicio(){
         if (qt != 0){
-            Integer n = dados[ini];
+            Item n = dados[ini];
             // retirar proxima linha depois
             //dados[ini] = null;
             ini = (ini + 1) % dados.length;
@@ -45,25 +47,6 @@ public class FilaVetor {
     
     }
     
-    void imprimeFilaNovo(){
-       int i = ini;
-       int j = 0;
-       while(j < qt){
-           System.out.print(dados[i] + "->");
-           i = (i + 1) % dados.length;
-           j++;
-       }
-           
-           
-    }
-    
-    void imprimeFilaBackup(){
-        for (int i = 0; i < dados.length; i++){
-            System.out.print(dados[i]+ "->");
-        }
-        System.out.println();
 
-    
-    }
     
 }
