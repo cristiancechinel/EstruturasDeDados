@@ -1,6 +1,9 @@
 com/mycompany/estruturasdedados/TestaLista.class
+com/mycompany/estruturasdedados/FilaVetor.class
+com/mycompany/estruturasdedados/ListaSequencial.class
 com/mycompany/estruturasdedados/PilhaVetorGenerica.class
 com/mycompany/estruturasdedados/EstruturasDeDados.class
+com/mycompany/estruturasdedados/TestaFila.class
 com/mycompany/estruturasdedados/TestaPilha.class
 com/mycompany/estruturasdedados/PilhaVetor.class
-com/mycompany/estruturasdedados/ListaSequencial.class
+com/mycompany/estruturasdedados/ListaSequencialGenerica.class

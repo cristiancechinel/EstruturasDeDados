@@ -25,7 +25,7 @@ public class FilaVetor {
         if (qt != 0){
             Integer n = dados[ini];
             // retirar proxima linha depois
-            dados[ini] = null;
+            //dados[ini] = null;
             ini = (ini + 1) % dados.length;
             qt--;
             return n;
@@ -37,6 +37,15 @@ public class FilaVetor {
     }
     
     void imprimeFila(){
+        int tam = dados.length;
+        int fim = (ini + qt) % tam;
+        for (int i = ini; i != fim; i = (i + 1)%tam){
+            System.out.print(dados[i] + "->");
+        }
+    
+    }
+    
+    void imprimeFilaNovo(){
        int i = ini;
        int j = 0;
        while(j < qt){
