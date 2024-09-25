@@ -54,6 +54,88 @@ public class ListaDuplamenteEncadeada {
         }
     }
     
+    Integer removeUltimo(){
+        if (inicio != null){
+            Integer n = ultimo.dado;
+            if (inicio == ultimo){//somente um elemento
+                inicio = ultimo = null;
+            }
+            else {
+                ultimo = ultimo.anterior;
+                ultimo.proximo = null;
+            }
+            return n;
+        }
+        else{
+            return null;
+        }   
+    
+    
+    }
+    
+    Integer removeMeio(int n){
+    
+       Nodo atual = inicio;
+       while (atual != null && atual.dado != n){
+           atual = atual.proximo;
+        }
+        if (atual == null)
+            return null;
+
+        //tratar quando é o único elemento 
+        
+        if (inicio == ultimo){
+            Integer x = atual.dado;
+            inicio = ultimo = null;
+            return x; 
+        }
+       //primeiro elemento
+        if (atual.anterior == null){
+            Integer x = atual.dado;
+            inicio = inicio.proximo;
+            inicio.anterior = null;
+            //falta atualizar o anterior do proximo
+            return x;
+        }
+        else{//remove ultimo elemento
+            if (atual.proximo == null){
+                Integer x = atual.dado;
+                atual.anterior.proximo = null;
+                ultimo = ultimo.anterior;
+                return x; 
+                
+            }
+            //elemento no meio
+            else {
+                Integer x = atual.dado;
+                atual.anterior.proximo = atual.proximo;
+                atual.proximo.anterior = atual.anterior;
+                return x;
+            }
+        }
+        //falta tratar quando é o último elemento
+    }
+    
+    
+    
+    
+    Integer removeInicio(){
+        
+        if (inicio != null){
+            Integer n = inicio.dado;
+            if (inicio == ultimo){
+                inicio = ultimo = null;
+            }
+            else {
+                inicio.proximo.anterior = null;
+                inicio = inicio.proximo;        
+            }
+            return n;
+        }
+        else{
+            return null;
+        }
+    }
     
     void imprimeLista(){
     
