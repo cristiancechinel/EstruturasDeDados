@@ -1,4 +1,6 @@
-
+// git add * 
+// git commit -m "Aula 24.09.2024"  
+// git push 
 package com.mycompany.estruturasdedados;
 
 import com.mycompany.estruturasdedados.ListaSimplesmenteEncadeada;
