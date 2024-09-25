@@ -5,7 +5,7 @@ public class ListaSimplesmenteEncadeada {
     Nodo inicio;
     
     private class Nodo{
-        int dado;
+        Integer dado;
         Nodo prox;
     
     }
@@ -18,15 +18,45 @@ public class ListaSimplesmenteEncadeada {
     }
    
     
-    int removeInicio(){
+    Integer removeInicio(){
         if (inicio != null){
             int temp = inicio.dado;
             inicio = inicio.prox;
             return temp;
         
         }
-        return -1;
+        return null;
     
+    }
+    
+    Integer removeMeio(int n){
+    
+        Nodo atual = inicio;
+        Nodo anterior = null;
+        //enquanto não chegou no final da lista
+        //e não encontrou n
+        while (atual != null && atual.dado != n){
+            anterior = atual;
+            atual = atual.prox;
+        }
+        //não encontrou encontrou - se chegou no final da lista
+        // se o atual == null
+        if (atual == null)
+            return null;
+        
+        //nesse ponto sabemos que o n foi encontrado
+        //verificar a posição - inicio da lista
+        if (anterior == null){
+            int x = atual.dado;
+            inicio = inicio.prox;
+            return x;
+        }
+        else {
+            int x = atual.dado;
+            anterior.prox = atual.prox; 
+            return x;
+        }
+
     }
     
     void imprimeLista2(){

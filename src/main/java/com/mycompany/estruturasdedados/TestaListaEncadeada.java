@@ -12,14 +12,7 @@ public class TestaListaEncadeada {
         lis.insereInicio(15);
         
         lis.imprimeLista();
-        int x = lis.removeInicio();
-        lis.imprimeLista();
-        
-        x = lis.removeInicio();
-        lis.imprimeLista();
-        x = lis.removeInicio();
-        lis.imprimeLista();
-        x = lis.removeInicio();
+        System.out.println("removeu "+  lis.removeMeio(10));
         lis.imprimeLista();
         
         
