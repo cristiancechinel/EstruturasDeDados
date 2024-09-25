@@ -1,13 +1,16 @@
 com/mycompany/estruturasdedados/TestaLista.class
 com/mycompany/estruturasdedados/ListaSimplesmenteEncadeada.class
 com/mycompany/estruturasdedados/ListaSimplesmenteEncadeada$Nodo.class
+com/mycompany/estruturasdedados/ListaDuplamenteEncadeada.class
 com/mycompany/estruturasdedados/ListaSequencial.class
 com/mycompany/estruturasdedados/TestaListaEncadeada.class
 com/mycompany/estruturasdedados/PilhaVetorGenerica.class
+com/mycompany/estruturasdedados/ListaDuplamenteEncadeada$Nodo.class
 com/mycompany/estruturasdedados/FilaVetor.class
 com/mycompany/estruturasdedados/EstruturasDeDados.class
 com/mycompany/estruturasdedados/TestaFila.class
 com/mycompany/estruturasdedados/FilaVetorGenerica.class
 com/mycompany/estruturasdedados/TestaPilha.class
 com/mycompany/estruturasdedados/PilhaVetor.class
+com/mycompany/estruturasdedados/TestaDuplamenteEncadeada.class
 com/mycompany/estruturasdedados/ListaSequencialGenerica.class
