@@ -8,17 +8,32 @@ import com.mycompany.estruturasdedados.ListaSimplesmenteEncadeada;
 public class TestaListaEncadeada {
     public static void main(String[] args){
         
-        ListaSimplesmenteEncadeada lis = new ListaSimplesmenteEncadeada();
-        lis.insereInicio(8);
-        lis.insereInicio(10);
-        lis.insereInicio(15);
+        PilhaEncadeada p = new PilhaEncadeada();
+        FilaEncadeada f = new FilaEncadeada();
         
-        lis.imprimeLista();
-        System.out.println("removeu "+  lis.removeMeio(10));
-        lis.imprimeLista();
+        p.empilha(7);
+        p.empilha(8);
+        p.empilha(20);
+        
+        p.imprimePilha();
         
         
+        f.insereFinal(p.desempilha());
+        p.imprimePilha();
+
+        f.insereFinal(p.desempilha());
+        p.imprimePilha();
     
-    
+        f.insereFinal(p.desempilha());
+        p.imprimePilha();
+   
+        f.insereFinal(p.desempilha());
+        p.imprimePilha();
+
+        
+        f.imprimeFila();
+   
+        
+        
     }
 }

@@ -5,9 +5,14 @@ com/mycompany/estruturasdedados/ListaDuplamenteEncadeada.class
 com/mycompany/estruturasdedados/ListaSequencial.class
 com/mycompany/estruturasdedados/TestaListaEncadeada.class
 com/mycompany/estruturasdedados/PilhaVetorGenerica.class
+com/mycompany/estruturasdedados/ListaDuplamenteEncadeadaGen.class
 com/mycompany/estruturasdedados/ListaDuplamenteEncadeada$Nodo.class
+com/mycompany/estruturasdedados/ListaDuplamenteEncadeadaGen$Nodo.class
 com/mycompany/estruturasdedados/FilaVetor.class
+com/mycompany/estruturasdedados/TesteListaEncadGen.class
+com/mycompany/estruturasdedados/FilaEncadeada.class
 com/mycompany/estruturasdedados/EstruturasDeDados.class
+com/mycompany/estruturasdedados/PilhaEncadeada.class
 com/mycompany/estruturasdedados/TestaFila.class
 com/mycompany/estruturasdedados/FilaVetorGenerica.class
 com/mycompany/estruturasdedados/TestaPilha.class
