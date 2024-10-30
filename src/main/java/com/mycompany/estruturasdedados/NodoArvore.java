@@ -13,6 +13,30 @@ public class NodoArvore {
         nodoDireito = dir;
     }
     
+    NodoArvore insere(NodoArvore atual, Integer v){
+        if (atual == null)
+            atual = new NodoArvore(v, null, null);
+        else if (v < atual.valor)
+            atual.nodoEsquerdo = insere(atual.nodoEsquerdo, v);
+        else atual.nodoDireito = insere(atual.nodoDireito, v);
+        
+        return atual;
+    }
+    
+    void imprimeSim(NodoArvore atual){
+        if (atual != null) {
+            System.out.print("<");
+            imprimeSim(atual.nodoEsquerdo);
+            System.out.print(atual.valor);
+            imprimeSim(atual.nodoDireito);
+            System.out.print(">");
+       
+        
+        }
+            
+    
+    }
+    
     boolean busca(NodoArvore nodo, Integer valor){
         if (nodo == null) return false;
         else 
