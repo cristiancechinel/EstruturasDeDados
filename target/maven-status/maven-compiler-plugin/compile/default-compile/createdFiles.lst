@@ -1,4 +1,5 @@
 com/mycompany/estruturasdedados/ListaSimplesmenteEncadeada.class
+com/mycompany/estruturasdedados/TestaArvoreBinaria.class
 com/mycompany/estruturasdedados/Calculadora.class
 com/mycompany/estruturasdedados/PilhaGenerica.class
 com/mycompany/estruturasdedados/PilhaVetorGenerica.class
@@ -16,6 +17,7 @@ com/mycompany/estruturasdedados/ListaSimplesmenteEncadeada$Nodo.class
 com/mycompany/estruturasdedados/ListaDuplamenteEncadeada.class
 com/mycompany/estruturasdedados/ListaSequencial.class
 com/mycompany/estruturasdedados/TestaListaEncadeada.class
+com/mycompany/estruturasdedados/ArvoreBinaria.class
 com/mycompany/estruturasdedados/FilaVetor.class
 com/mycompany/estruturasdedados/TesteListaEncadGen.class
 com/mycompany/estruturasdedados/FilaEncadeada.class
