@@ -23,4 +23,10 @@ public class ArvoreBinaria {
         System.out.println();
     
     }
+    
+    void retira(Integer v){
+        if (this.raiz != null)
+           raiz = raiz.retiraValor(raiz, v);
+    }
+    
 }
