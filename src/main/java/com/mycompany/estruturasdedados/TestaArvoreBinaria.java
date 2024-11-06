@@ -13,12 +13,10 @@ public class TestaArvoreBinaria {
         a.insere(65);
         a.insere(43);
         a.insere(47);
+        a.insere(68);
         a.imprimeSim();
-        a.retira(50);
-        a.imprimeSim();
-        a.retira(60);
-        a.imprimeSim();
-    
+        System.out.println("altura = " + a.altura());
+
     }
        
 }

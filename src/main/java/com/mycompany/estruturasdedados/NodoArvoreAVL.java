@@ -1,21 +1,42 @@
 
 package com.mycompany.estruturasdedados;
 
-public class NodoArvore {
-    private NodoArvore nodoEsquerdo;
+public class NodoArvoreAVL {
+    private NodoArvoreAVL nodoEsquerdo;
     private Integer valor; 
-    private NodoArvore nodoDireito;
+    private NodoArvoreAVL nodoDireito;
+   
     
     
-    NodoArvore(Integer valor, NodoArvore esq, NodoArvore dir){
+    
+    NodoArvoreAVL(Integer valor, NodoArvoreAVL esq, NodoArvoreAVL dir){
         this.valor = valor;
         nodoEsquerdo = esq;
         nodoDireito = dir;
     }
     
-    NodoArvore insere(NodoArvore atual, Integer v){
+   
+    NodoArvoreAVL rotacaoDireita(NodoArvoreAVL atual){
+        NodoArvoreAVL temp = atual.nodoEsquerdo;
+        atual.nodoEsquerdo = temp.nodoDireito;
+        temp.nodoDireito = atual;
+        return temp; 
+    }
+    
+    
+    NodoArvoreAVL rotacaoEsquerda(NodoArvoreAVL atual){
+        NodoArvoreAVL temp = atual.nodoDireito;
+        atual.nodoDireito = temp.nodoEsquerdo;
+        temp.nodoEsquerdo = atual;
+        return temp;
+    
+    
+    }
+    
+    
+    NodoArvoreAVL insere(NodoArvoreAVL atual, Integer v){
         if (atual == null)
-            atual = new NodoArvore(v, null, null);
+            atual = new NodoArvoreAVL(v, null, null);
         else if (v < atual.valor)
             atual.nodoEsquerdo = insere(atual.nodoEsquerdo, v);
         else atual.nodoDireito = insere(atual.nodoDireito, v);
@@ -24,7 +45,7 @@ public class NodoArvore {
     }
     
     
-    NodoArvore retiraValor(NodoArvore nodo, Integer valor){
+    NodoArvoreAVL retiraValor(NodoArvoreAVL nodo, Integer valor){
     
         if (nodo == null) return null;
         else if (valor < nodo.valor)//retirar da esquerda
@@ -44,7 +65,7 @@ public class NodoArvore {
             }
             // tem dois filhos 
             // busca pelo mais à direita do filho da esquerda
-            NodoArvore temp = nodo.nodoEsquerdo;
+            NodoArvoreAVL temp = nodo.nodoEsquerdo;
             while (temp.nodoDireito != null)
                 temp = temp.nodoDireito;
             //troca valor 
@@ -65,7 +86,7 @@ public class NodoArvore {
     }
     
     
-    int altura(NodoArvore atual){
+    int altura(NodoArvoreAVL atual){
     
         if (atual == null) return - 1;
         else 
@@ -75,7 +96,7 @@ public class NodoArvore {
     
     }
     
-    void imprimeSim(NodoArvore atual){
+    void imprimeSim(NodoArvoreAVL atual){
         if (atual != null) {
             System.out.print("<");
             imprimeSim(atual.nodoEsquerdo);
@@ -92,7 +113,7 @@ public class NodoArvore {
     
     
     
-    boolean busca(NodoArvore nodo, Integer valor){
+    boolean busca(NodoArvoreAVL nodo, Integer valor){
         if (nodo == null) return false;
         else 
             if (nodo.valor == valor) return true;

@@ -7,12 +7,15 @@ com/mycompany/estruturasdedados/ListaDuplamenteEncadeadaGen.class
 com/mycompany/estruturasdedados/ListaDuplamenteEncadeada$Nodo.class
 com/mycompany/estruturasdedados/ListaDuplamenteEncadeadaGen$Nodo.class
 com/mycompany/estruturasdedados/TestaNodoArvore.class
+com/mycompany/estruturasdedados/TestaArvoreAVL.class
+com/mycompany/estruturasdedados/ArvoreAVL.class
 com/mycompany/estruturasdedados/TestaFila.class
 com/mycompany/estruturasdedados/TestaPilha.class
 com/mycompany/estruturasdedados/TestaDuplamenteEncadeada.class
 com/mycompany/estruturasdedados/ListaSequencialGenerica.class
 com/mycompany/estruturasdedados/TestaLista.class
 com/mycompany/estruturasdedados/NodoArvore.class
+com/mycompany/estruturasdedados/NodoArvoreAVL.class
 com/mycompany/estruturasdedados/ListaSimplesmenteEncadeada$Nodo.class
 com/mycompany/estruturasdedados/ListaDuplamenteEncadeada.class
 com/mycompany/estruturasdedados/ListaSequencial.class

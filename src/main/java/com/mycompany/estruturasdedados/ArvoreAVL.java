@@ -2,10 +2,10 @@
 package com.mycompany.estruturasdedados;
 
 
-public class ArvoreBinaria {
-    private NodoArvore raiz;
+public class ArvoreAVL {
+    private NodoArvoreAVL raiz;
     
-    ArvoreBinaria(){
+    ArvoreAVL(){
         raiz = null;
     }
 
@@ -17,7 +17,7 @@ public class ArvoreBinaria {
     
     void insere(Integer v){
         if (this.raiz == null) 
-            raiz = new NodoArvore(v, null, null);
+            raiz = new NodoArvoreAVL(v, null, null);
         else
             raiz = raiz.insere(raiz, v);
     }
