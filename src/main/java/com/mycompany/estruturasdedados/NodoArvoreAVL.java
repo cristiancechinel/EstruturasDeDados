@@ -22,6 +22,19 @@ public class NodoArvoreAVL {
         temp.nodoDireito = atual;
         return temp; 
     }
+
+    NodoArvoreAVL rotacaoDireitaEsquerda(NodoArvoreAVL atual){
+        atual.nodoDireito = atual.rotacaoDireita(atual.nodoDireito);
+        atual = atual.rotacaoEsquerda(atual);
+        return atual;
+    }
+    
+    
+    NodoArvoreAVL rotacaoEsquerdaDireita(NodoArvoreAVL atual){
+        atual.nodoEsquerdo = atual.rotacaoEsquerda(atual.nodoEsquerdo);
+        atual = atual.rotacaoDireita(atual);
+        return atual;
+    }
     
     
     NodoArvoreAVL rotacaoEsquerda(NodoArvoreAVL atual){
@@ -34,47 +47,95 @@ public class NodoArvoreAVL {
     }
     
     
-    NodoArvoreAVL insere(NodoArvoreAVL atual, Integer v){
+    NodoArvoreAVL insereBalanceado(NodoArvoreAVL atual, Integer v){
         if (atual == null)
             atual = new NodoArvoreAVL(v, null, null);
-        else if (v < atual.valor)
-            atual.nodoEsquerdo = insere(atual.nodoEsquerdo, v);
-        else atual.nodoDireito = insere(atual.nodoDireito, v);
         
+        else if (v < atual.valor){
+            atual.nodoEsquerdo = insereBalanceado(atual.nodoEsquerdo, v);
+            
+            if (atual.altura(atual.nodoEsquerdo) - 
+                atual.altura(atual.nodoDireito) == 2){
+            //desbalanceamento
+                if (v < atual.nodoEsquerdo.valor) // rotacaoSimples
+                    atual = atual.rotacaoDireita(atual);
+                else // rotação dupla
+                    atual = atual.rotacaoEsquerdaDireita(atual);
+            }
+        }
+        else {
+            atual.nodoDireito = insereBalanceado(atual.nodoDireito, v);
+            
+            if (atual.altura(atual.nodoEsquerdo) -
+                atual.altura(atual.nodoDireito) == -2){
+             //desbalanceamento
+             if (v > atual.nodoDireito.valor) //rotacaoSimples
+                 atual = atual.rotacaoEsquerda(atual);
+             else//rotação dupla
+                 atual = atual.rotacaoDireitaEsquerda(atual);
+            
+            }
+        }
+
         return atual;
     }
     
     
-    NodoArvoreAVL retiraValor(NodoArvoreAVL nodo, Integer valor){
+    NodoArvoreAVL retiraValorAVL(NodoArvoreAVL a, Integer valor){
     
-        if (nodo == null) return null;
-        else if (valor < nodo.valor)//retirar da esquerda
-            nodo.nodoEsquerdo = retiraValor(nodo.nodoEsquerdo, valor);
-        else if (valor > nodo.valor)//retirar da direita
-            nodo.nodoDireito = retiraValor(nodo.nodoDireito, valor);
+        if (a == null) return null;
+        else if (valor < a.valor){//retirar da esquerda
+            
+            a.nodoEsquerdo = retiraValorAVL(a.nodoEsquerdo, valor);
+            
+            if (altura(a.nodoEsquerdo)- altura(a.nodoDireito) == -2){
+                if (altura(a.nodoDireito.nodoEsquerdo) 
+                    - altura(a.nodoDireito.nodoDireito) == -1 )//rotacao simples
+                    a = a.rotacaoEsquerda(a);
+                else //rotacao dupla
+                    a = a.rotacaoDireitaEsquerda(a);
+            }
+        }
+        else if (valor > a.valor){//retirar da direita
+            a.nodoDireito = retiraValorAVL(a.nodoDireito, valor);
+            if (altura(a.nodoEsquerdo) - altura(a.nodoDireito) == 2) {
+                if (altura(a.nodoEsquerdo.nodoEsquerdo)
+                    - altura(a.nodoEsquerdo.nodoDireito) == 1)//rotacao simples
+                    a = a.rotacaoDireita(a);
+                else
+                    a = a.rotacaoEsquerdaDireita(a);
+            }
+        }
+        
+        
+        
+        
+        
+        
+        
         else {//elemento encontrado  - verificar quantos filhos
             //sem filhos
-            if (nodo.nodoDireito == null && nodo.nodoEsquerdo == null) {
+            if (a.nodoDireito == null && a.nodoEsquerdo == null) {
                 return null;
             }
-            if (nodo.nodoDireito == null) {// 1 filho na esquerda
-                return nodo.nodoEsquerdo;
+            if (a.nodoDireito == null) {// 1 filho na esquerda
+                return a.nodoEsquerdo;
             }
-            if (nodo.nodoEsquerdo == null){// 1 filho direita
-                return nodo.nodoDireito;
+            if (a.nodoEsquerdo == null){// 1 filho direita
+                return a.nodoDireito;
             }
             // tem dois filhos 
             // busca pelo mais à direita do filho da esquerda
-            NodoArvoreAVL temp = nodo.nodoEsquerdo;
+            NodoArvoreAVL temp = a.nodoEsquerdo;
             while (temp.nodoDireito != null)
                 temp = temp.nodoDireito;
             //troca valor 
-            nodo.valor = temp.valor;
+            a.valor = temp.valor;
             temp.valor = valor;
             //reinicia a retirada da subarvore em que valor foi trocado
-            nodo.nodoEsquerdo = retiraValor(nodo.nodoEsquerdo, valor);
+            a.nodoEsquerdo = retiraValorAVL(a.nodoEsquerdo, valor);
         }
-        return nodo;
+        return a;
     
     
     

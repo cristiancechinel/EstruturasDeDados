@@ -19,7 +19,7 @@ public class ArvoreAVL {
         if (this.raiz == null) 
             raiz = new NodoArvoreAVL(v, null, null);
         else
-            raiz = raiz.insere(raiz, v);
+            raiz = raiz.insereBalanceado(raiz, v);
     }
     
     void imprimeSim(){
