@@ -2,6 +2,7 @@
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/FilaVetorGenerica.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/PilhaVetorGenerica.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/PilhaEncadeada.java
+/home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/BuscaLargura.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/TestaNodoArvore.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/TestaPilha.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/TestaLista.java
@@ -19,9 +20,11 @@
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/ListaSequencial.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/Calculadora.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/PilhaGenerica.java
+/home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/Grafo.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/TestaArvoreBinaria.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/ListaDuplamenteEncadeada.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/TestaListaEncadeada.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/TestaArvoreAVL.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/EstruturasDeDados.java
+/home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/TestaGrafo.java
 /home/cechinel/NetBeansProjects/EstruturasDeDados/src/main/java/com/mycompany/estruturasdedados/TestaDuplamenteEncadeada.java

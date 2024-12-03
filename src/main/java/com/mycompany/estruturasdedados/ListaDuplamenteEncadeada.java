@@ -15,6 +15,11 @@ public class ListaDuplamenteEncadeada {
         ultimo = null;
     }
     
+    boolean vazia(){
+        if (inicio == null) return true;
+        else return false;
+    }
+    
     void insereInicio(Integer n){
         Nodo novo = new Nodo();
         novo.dado = n;

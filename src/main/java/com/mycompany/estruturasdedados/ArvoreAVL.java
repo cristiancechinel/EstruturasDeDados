@@ -30,9 +30,9 @@ public class ArvoreAVL {
     
     }
     
-    void retira(Integer v){
-        if (this.raiz != null)
-           raiz = raiz.retiraValor(raiz, v);
-    }
+   // void retira(Integer v){
+    //    if (this.raiz != null)
+    //       raiz = raiz.retiraValor(raiz, v);
+   // }
     
 }

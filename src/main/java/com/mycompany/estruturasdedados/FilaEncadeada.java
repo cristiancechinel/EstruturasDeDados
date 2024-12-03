@@ -17,6 +17,10 @@ public class FilaEncadeada {
              return lista.removeInicio();
         
         }
+
+        boolean filaVazia(){
+            return lista.vazia();
+        }
         
         void imprimeFila(){
             lista.imprimeLista();

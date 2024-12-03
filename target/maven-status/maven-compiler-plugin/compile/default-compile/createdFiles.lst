@@ -9,8 +9,10 @@ com/mycompany/estruturasdedados/ListaDuplamenteEncadeadaGen$Nodo.class
 com/mycompany/estruturasdedados/TestaNodoArvore.class
 com/mycompany/estruturasdedados/TestaArvoreAVL.class
 com/mycompany/estruturasdedados/ArvoreAVL.class
+com/mycompany/estruturasdedados/TestaGrafo.class
 com/mycompany/estruturasdedados/TestaFila.class
 com/mycompany/estruturasdedados/TestaPilha.class
+com/mycompany/estruturasdedados/BuscaLargura.class
 com/mycompany/estruturasdedados/TestaDuplamenteEncadeada.class
 com/mycompany/estruturasdedados/ListaSequencialGenerica.class
 com/mycompany/estruturasdedados/TestaLista.class
@@ -20,6 +22,7 @@ com/mycompany/estruturasdedados/ListaSimplesmenteEncadeada$Nodo.class
 com/mycompany/estruturasdedados/ListaDuplamenteEncadeada.class
 com/mycompany/estruturasdedados/ListaSequencial.class
 com/mycompany/estruturasdedados/TestaListaEncadeada.class
+com/mycompany/estruturasdedados/Grafo.class
 com/mycompany/estruturasdedados/ArvoreBinaria.class
 com/mycompany/estruturasdedados/FilaVetor.class
 com/mycompany/estruturasdedados/TesteListaEncadGen.class
