@@ -9,6 +9,8 @@ public class BuscaLargura {
     private static final int PRETO = 1;
     private Grafo grafo;
     
+    
+    private int origem;
     //cores -1 = branco, 0 = cinza, 1 = preto
     
     BuscaLargura(Grafo g){
@@ -25,6 +27,9 @@ public class BuscaLargura {
     }
     
     public void busca(int origem){
+        this.origem = origem;
+        //para poder utilizar a origem em outros métodos
+        
         cor[origem] = CINZA;
         FilaEncadeada fila = new FilaEncadeada();
         fila.insereFinal(origem);
@@ -43,11 +48,39 @@ public class BuscaLargura {
                 }
             }
             cor[u] = PRETO;
+         
+            
         }
     }
     
+    void imprimeCaminhoInverso(int destino){
+        System.out.println("origem = "+ origem + " destino = "+destino);
+        System.out.println
+        ("distancia de "+ origem + " para " + destino + " = " + distancia[destino]);
+        imprimeCaminhoRec(destino);
+        System.out.print(destino);
+    }
     
+    void imprimeCaminhoRec(int destino){
+        int temp = destino;
+        if (pai[temp] != -1){
+            imprimeCaminhoRec(pai[temp]);
+            System.out.print(pai[temp]  + "->");
+        }
+      }
     
+   /* void imprimeCaminho(int destino){
+        int temp = destino;
+        System.out.print(temp + "<-");
+        while (pai[temp] != -1){
+            System.out.print(pai[temp] + "<-");
+            temp = pai[temp];
+        }
+     //   System.out.print(destino);
+    
+    }
+    
+    */
     
     void imprimeVetores(){
         
